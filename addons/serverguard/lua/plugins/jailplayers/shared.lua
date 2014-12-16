@@ -331,10 +331,10 @@ local function playerPickup( ply, ent )
 end
 plugin:Hook("PhysgunPickup", "jailplayers.PlayerPickupJailCheck", playerPickup, -20)
 
-local function playerDrop( ply, ent )
-	if CLIENT then return end
-	if ent:IsPlayer() then
-		ent.physgunned_by[ ply ] = nil
-	end
-end
-plugin:Hook("PhysgunDrop", "jailplayers.PlayerDropJailCheck", playerDrop)
+--local function playerDrop( ply, ent )
+--	if CLIENT then return end
+--	if ent:IsPlayer() then
+--		ent.physgunned_by[ ply ] = nil
+--	end
+--end
+--plugin:Hook("PhysgunDrop", "jailplayers.PlayerDropJailCheck", playerDrop)
